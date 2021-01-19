@@ -14,13 +14,7 @@ const StoreProvider = ({ children }) => {
   const handleValidate = (boolean) => {
     setAcceptSearch(boolean);
   };
-  return (
-    <StoreContext.Provider
-    // value={{ clientId, handleSearch, search, handleValidate, acceptSearch }}
-    >
-      {children}
-    </StoreContext.Provider>
-  );
+  return <StoreContext.Provider value={{}}>{children}</StoreContext.Provider>;
 };
 
 export default StoreProvider;

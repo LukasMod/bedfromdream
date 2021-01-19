@@ -3,7 +3,7 @@
 .Results {
   min-height: 75vh;
   &__title {
-    color: $color-font-1;
+    color: $color-1;
     padding: 0.25em 0;
     font-size: 1.3rem;
     @include for-tablet-portrait-up {
@@ -12,7 +12,9 @@
   }
   &__list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 0.5em;
   }
 }

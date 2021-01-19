@@ -5,12 +5,12 @@
   width: 100%;
   min-height: 10vh;
   padding: 1em;
-  background-color: $color-font-1;
-  color: $color-font-3;
+  background-color: $color-1;
+  color: $color-3;
   & a,
   & a:link,
   & a:visited {
-    color: $color-font-3;
+    color: $color-3;
   }
   &__media-wrapper {
     display: flex;
@@ -31,7 +31,7 @@
       }
     }
     &:hover {
-      color: $color-font-4;
+      color: $color-4;
       cursor: pointer;
     }
   }
