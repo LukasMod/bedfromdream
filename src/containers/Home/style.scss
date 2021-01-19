@@ -1,0 +1,27 @@
+@import '../../constants/Breakpoints.scss';
+@import '../../constants/Colors.scss';
+
+.Home {
+  height: 90vh;
+  background-image: url('./assets/lonely-cabin.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  &__wrapper {
+    margin: 0 auto;
+    padding: 10em 0;
+  }
+  &__title {
+    font-size: 2rem;
+    @include for-tablet-portrait-up {
+      font-size: 3rem;
+    }
+  }
+  &__paragraph {
+    padding: 0.5em 0 1em 0;
+    font-size: 1rem;
+    @include for-tablet-portrait-up {
+      font-size: 1.5rem;
+    }
+  }
+}

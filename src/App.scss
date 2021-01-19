@@ -1,0 +1,17 @@
+@import './constants/Colors.scss';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.App {
+  text-align: center;
+  color: $color-font-1;
+  width: 100%;
+}
