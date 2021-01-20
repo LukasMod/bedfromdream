@@ -1,13 +1,28 @@
 @import '../../constants/Colors.scss';
 
 .Button {
-  padding: 0.5em;
-  font-size: 1.5rem;
-  background: $background-opacity-1;
-  border-radius: 0.5em;
-  transition: 0.4s;
-  &:hover {
-    cursor: pointer;
-    background-color: $color-4;
+  &--home {
+    padding: 0.5em;
+    font-size: 1.5rem;
+    background: $background-opacity-1;
+    border-radius: 0.5em;
+    transition: 0.4s;
+    &:hover {
+      cursor: pointer;
+      background-color: $color-4;
+    }
+  }
+  &--light {
+    padding: 0.5em 1.5em;
+    font-size: 1rem;
+    background: $color-3;
+    border: 1px solid $color-1;
+    border-radius: 0.5em;
+    transition: 0.4s;
+    &:hover {
+      cursor: pointer;
+      background-color: $color-2;
+      color: white;
+    }
   }
 }

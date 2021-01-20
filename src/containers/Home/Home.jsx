@@ -17,7 +17,11 @@ const Home = () => {
         <p className="Home__paragraph">
           Find your dream place with us and book a bed for few nights.
         </p>
-        <Button onClick={handleClick} text="Check our places" />
+        <Button
+          onClick={handleClick}
+          text="Check our places"
+          styleName="home"
+        />
       </div>
     </div>
   );

@@ -64,6 +64,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1em;
+
+    @include for-tablet-portrait-up {
+      padding: 1em;
+    }
   }
   &__icon {
     font-size: 2rem;

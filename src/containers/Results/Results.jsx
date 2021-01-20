@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { StoreContext } from '../../store/StoreProvider';
 import { Card } from './../../components/Card';
+import { CardsList } from './../../components/CardsList';
+import { Summary } from './../../components/Summary';
 // import { Image } from '../../components/Image';
 
 import './style.scss';
@@ -34,13 +36,6 @@ const Results = () => {
   //   setImageClicked(imageData);
   // };
 
-  const showPlacesList = () => {
-    if (places.length > 0) {
-      return places.map((data) => <Card key={data.id} data={data} />);
-    }
-  };
-
-  console.log(places);
   // const showTitle = () => {
   //   if (error)
   //     return `We have some problems with server (error: ${error}). Please, wait 5 minutes and try again.`;
@@ -54,7 +49,8 @@ const Results = () => {
     <div className="Results">
       <div className="Results__wrapper">
         {/* <h3 className="Results__title">{showTitle()}</h3> */}
-        <div className="Results__list"> {showPlacesList()}</div>
+        <CardsList data={places} />
+        <Summary />
       </div>
     </div>
   );

@@ -1,0 +1,10 @@
+@import '../../constants/Breakpoints.scss';
+@import '../../constants/Colors.scss';
+
+.CardsList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding-top: 0.5em;
+}
