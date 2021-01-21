@@ -10,6 +10,7 @@
   overflow: hidden;
   padding: 0.25em;
   margin-bottom: 1em;
+  position: relative;
 
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.28);
 
@@ -32,7 +33,7 @@
   }
 
   &__info-wrapper {
-    flex-basis: 50%;
+    flex-basis: 45%;
     text-align: left;
     padding-left: 0.5em;
   }
@@ -49,7 +50,7 @@
     justify-content: center;
     align-items: center;
     font-size: 1.1rem;
-    padding: 0.5em;
+    padding: 0.25em;
   }
   &__cost {
     padding: 1em 0;
@@ -60,7 +61,7 @@
   }
 
   &__actions-wrapper {
-    flex-basis: 10%;
+    flex-basis: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,6 +75,19 @@
     font-size: 2rem;
     color: $color-2;
     transition: 0.3s;
+    &--trash {
+      position: absolute;
+      top: 0.5em;
+      right: 0.5em;
+      font-size: 1.5rem;
+      color: $color-2;
+      transition: 0.3s;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-1;
+      }
+    }
     &:hover {
       cursor: pointer;
       color: $color-1;

@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMinusSquare, faPlusSquare } from '@fortawesome/free-solid-svg-icons';
+import {
+  faMinusSquare,
+  faPlusSquare,
+  faTrashAlt,
+} from '@fortawesome/free-solid-svg-icons';
 
 import './style.scss';
-const Card = ({ data }) => {
-  const { urlThumb, name, description, cost } = data;
+const Card = ({ data, handleDelete }) => {
+  const { urlThumb, name, description, cost, id } = data;
   const [numberOfNights, setNumberOfNights] = useState(0);
+
+  const hotelPrice = numberOfNights * cost;
 
   const handleSubtract = () => {
     setNumberOfNights(numberOfNights - 1);
@@ -28,7 +34,7 @@ const Card = ({ data }) => {
         <span className="Card__cost">{cost} $/night</span>
         {numberOfNights === 0 || (
           <span className="Card__cost--sum">
-            total: {(numberOfNights * cost).toFixed(2)} $
+            total: {hotelPrice.toFixed(2)} $
           </span>
         )}
       </div>
@@ -45,6 +51,11 @@ const Card = ({ data }) => {
           icon={faPlusSquare}
           className="Card__icon"
           onClick={handleAdd}
+        />
+        <FontAwesomeIcon
+          icon={faTrashAlt}
+          className="Card__icon--trash"
+          onClick={() => handleDelete(id)}
         />
       </div>
     </div>

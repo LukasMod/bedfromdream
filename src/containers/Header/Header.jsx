@@ -1,10 +1,9 @@
 import React from 'react';
-// import { InputSearch } from '../../components/InputSearch';
 
 import './style.scss';
 
 const Header = () => {
-  return <header className="Header">{/* <InputSearch /> */}</header>;
+  return <header className="Header"></header>;
 };
 
 export default Header;
