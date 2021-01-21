@@ -23,8 +23,6 @@ const ContextProvider = ({ children }) => {
     }
   };
 
-  console.log(booking);
-
   const newSummaryCost = booking
     .map((item) => item.cost * item.numberOfNights)
     .reduce((a, b) => a + b, 0);

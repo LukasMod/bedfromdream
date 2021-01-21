@@ -4,7 +4,7 @@ import { Table } from './../Table';
 import { Context } from '../../context/ContextProvider';
 
 import './style.scss';
-const Summary = ({ data }) => {
+const Summary = () => {
   const { booking, summaryCost } = useContext(Context);
 
   const handleClick = () => {};
