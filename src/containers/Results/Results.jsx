@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { CardsList } from './../../components/CardsList';
 import { Summary } from './../../components/Summary';
+import { Context } from '../../context/ContextProvider';
 
 import './style.scss';
 
 const Results = () => {
+  const { booking, changeBookingData } = useContext(Context);
+
   const [places, setPlaces] = useState([]);
   const [error, setError] = useState('');
   const [isLoading, setLoading] = useState(true);
@@ -26,8 +29,9 @@ const Results = () => {
       .catch((error) => setError(error.message));
   }, [urlAPI]);
 
-  const deletePlace = (placeId) => {
-    const newPlaceList = places.filter((data) => data.id !== placeId);
+  const deletePlace = (place) => {
+    const newPlaceList = places.filter((data) => data.id !== place.id);
+    changeBookingData(place, 0);
     setPlaces(newPlaceList);
   };
 

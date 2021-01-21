@@ -6,13 +6,13 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
-import StoreProvider from './store/StoreProvider';
+import ContextProvider from './context/ContextProvider';
 
 import './App.scss';
 
 function App() {
   return (
-    <StoreProvider>
+    <ContextProvider>
       <Router>
         <div className="App">
           <Switch>
@@ -34,7 +34,7 @@ function App() {
           </Switch>
         </div>
       </Router>
-    </StoreProvider>
+    </ContextProvider>
   );
 }
 

@@ -1,0 +1,15 @@
+@import '../../constants/Colors.scss';
+
+.Table {
+  border-collapse: collapse;
+  width: 90%;
+  &__header {
+    padding: 0.25rem;
+    text-align: left;
+    border-bottom: 1px solid $color-1;
+  }
+  &__data {
+    padding: 0.25rem;
+    text-align: left;
+  }
+}

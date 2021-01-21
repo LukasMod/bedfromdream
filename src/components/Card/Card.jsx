@@ -1,24 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faMinusSquare,
   faPlusSquare,
   faTrashAlt,
 } from '@fortawesome/free-solid-svg-icons';
+import { Context } from '../../context/ContextProvider';
 
 import './style.scss';
 const Card = ({ data, handleDelete }) => {
-  const { urlThumb, name, description, cost, id } = data;
+  const { changeBookingData } = useContext(Context);
+
+  const { urlThumb, name, description, cost } = data;
   const [numberOfNights, setNumberOfNights] = useState(0);
 
   const hotelPrice = numberOfNights * cost;
 
   const handleSubtract = () => {
     setNumberOfNights(numberOfNights - 1);
+    changeBookingData(data, numberOfNights - 1);
   };
 
   const handleAdd = () => {
     setNumberOfNights(numberOfNights + 1);
+    changeBookingData(data, numberOfNights + 1);
   };
 
   return (
@@ -55,7 +60,7 @@ const Card = ({ data, handleDelete }) => {
         <FontAwesomeIcon
           icon={faTrashAlt}
           className="Card__icon--trash"
-          onClick={() => handleDelete(id)}
+          onClick={() => handleDelete(data)}
         />
       </div>
     </div>
