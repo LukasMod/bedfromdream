@@ -9,8 +9,9 @@ import './style.scss';
 const Summary = () => {
   const { booking, summaryCost } = useContext(Context);
   const history = useHistory();
+
   const handleClick = () => {
-    history.push('/payment');
+    if (summaryCost > 0) history.push('/payment');
   };
 
   return (
@@ -20,7 +21,11 @@ const Summary = () => {
       </div>
       <div className="Summary__actions">
         <span className="Summary__cost"> {summaryCost.toFixed(2)} $</span>
-        <Button onClick={handleClick} text="BUY" styleName="light" />
+        <Button
+          onClick={handleClick}
+          text="BUY"
+          styleName={summaryCost === 0 ? `disabled` : `light`}
+        />
       </div>
     </div>
   );

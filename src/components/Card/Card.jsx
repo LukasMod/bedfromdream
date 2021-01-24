@@ -29,7 +29,13 @@ const Card = ({ data, handleDelete }) => {
   return (
     <div className="Card" onClick={() => {}}>
       <div className="Card__img-wrapper">
-        <img className="Card__img" src={urlThumb} alt={name} />
+        <img
+          className="Card__img"
+          src={urlThumb}
+          alt={name}
+          width="200px"
+          height="133px"
+        />
       </div>
       <div className="Card__info-wrapper">
         <h3 className="Card__title">{name}</h3>
@@ -52,11 +58,14 @@ const Card = ({ data, handleDelete }) => {
           />
         )}
         <span className="Card__nights-sum">{numberOfNights}</span>
-        <FontAwesomeIcon
-          icon={faPlusSquare}
-          className="Card__icon"
-          onClick={handleAdd}
-        />
+        {numberOfNights === 14 || (
+          <FontAwesomeIcon
+            icon={faPlusSquare}
+            className="Card__icon"
+            onClick={handleAdd}
+          />
+        )}
+
         <FontAwesomeIcon
           icon={faTrashAlt}
           className="Card__icon--trash"

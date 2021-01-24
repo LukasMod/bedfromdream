@@ -6,14 +6,13 @@ import { Context } from '../../context/ContextProvider';
 import './style.scss';
 
 const Results = () => {
-  const { booking, changeBookingData } = useContext(Context);
+  const { changeBookingData } = useContext(Context);
 
   const [places, setPlaces] = useState([]);
   const [error, setError] = useState('');
   const [isLoading, setLoading] = useState(true);
 
   const urlAPI = `https://600689953698a80017de18f0.mockapi.io/places`;
-  // const urlAPI = 'dummyAPI.json';
 
   useEffect(() => {
     fetch(urlAPI)
