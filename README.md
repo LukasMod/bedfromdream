@@ -23,13 +23,14 @@ Features added:
 * buttons to manipulate number of nights booked, trash button to delete position completely
 * summary below with table and all booking info
 * responsive web design (in progress)
+* payment route, form with validation
 
 ---
 
 Possible future improvements:
-* payment route, form with validation
+
 * skeleton components while loading (now only text)
-* optimalization (useless re-renders because of using objects), refactor context
-* skeleton components while loading
+* optimalization, refactor context
+
 
 
