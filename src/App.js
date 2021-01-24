@@ -1,5 +1,12 @@
 import React from 'react';
-import { Home, Results, PageNotFound, Header, Footer } from './containers';
+import {
+  Home,
+  Results,
+  PageNotFound,
+  Header,
+  Footer,
+  Form,
+} from './containers';
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,6 +30,11 @@ function App() {
             <Route path="/cart" exact>
               <Header />
               <Results />
+              <Footer />
+            </Route>
+            <Route path="/payment" exact>
+              <Header />
+              <Form />
               <Footer />
             </Route>
             <Route path="/page-not-found">

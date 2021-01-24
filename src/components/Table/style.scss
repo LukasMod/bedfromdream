@@ -1,8 +1,9 @@
 @import '../../constants/Colors.scss';
+@import '../../constants/Breakpoints.scss';
 
 .Table {
   border-collapse: collapse;
-  width: 90%;
+  width: 95%;
   &__header {
     padding: 0.25rem;
     text-align: left;
@@ -11,5 +12,8 @@
   &__data {
     padding: 0.25rem;
     text-align: left;
+    &--cost {
+      min-width: 90px;
+    }
   }
 }

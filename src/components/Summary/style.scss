@@ -21,13 +21,13 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.52);
   }
   &__items {
-    flex-basis: 70%;
+    flex-basis: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   &__actions {
-    flex-basis: 30%;
+    flex-basis: 35%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -41,10 +41,10 @@
   &__cost {
     font-size: 1rem;
     font-weight: 700;
-    margin: 0.5em 1.5em;
+    margin: 0.5em 1em;
     @include for-tablet-portrait-up {
       font-size: 1.2rem;
-      margin: 0 1.5em;
+      margin: 0 1em;
     }
   }
 }

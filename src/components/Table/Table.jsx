@@ -16,7 +16,7 @@ const Table = ({ booking }) => {
           <tr key={item.id}>
             <td className="Table__data">{item.name}</td>
             <td className="Table__data">{item.numberOfNights}</td>
-            <td className="Table__data">
+            <td className="Table__data Table__data--cost">
               {(item.cost * item.numberOfNights).toFixed(2)} $
             </td>
           </tr>

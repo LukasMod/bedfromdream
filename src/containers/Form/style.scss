@@ -1,0 +1,73 @@
+@import '../../constants/Breakpoints.scss';
+@import '../../constants/Colors.scss';
+
+.Form {
+  min-height: 75vh;
+  width: 70%;
+  padding: 1em 0.25em;
+  margin: 0 auto;
+
+  &__title {
+    color: $color-1;
+    padding: 0.25em 0;
+    font-size: 1.3rem;
+    @include for-tablet-portrait-up {
+      font-size: 2rem;
+    }
+  }
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 0.5em;
+    transition: 0.2s;
+
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.28);
+
+    @include for-tablet-portrait-up {
+      padding: 1em;
+    }
+    &:hover {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.52);
+    }
+  }
+  &__paragraph {
+    padding: 0.5em 0 1em 0;
+    font-size: 1rem;
+    @include for-tablet-portrait-up {
+      font-size: 1.5rem;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0.5em;
+    @include for-tablet-portrait-up {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__label {
+    color: $color-1;
+    padding: 0.2em 0;
+    @include for-tablet-portrait-up {
+      padding: 0 1em;
+    }
+  }
+  &__input {
+    min-width: 200px;
+    color: red;
+  }
+  &__Button {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
